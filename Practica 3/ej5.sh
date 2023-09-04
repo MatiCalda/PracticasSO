@@ -10,3 +10,5 @@ for archivo in $1/*; do
     fecha=$(stat $archivo | tail -3 | head -1 | cut -d ' ' -f 2)
     echo $fecha
 done
+
+#test
