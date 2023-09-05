@@ -1,6 +1,7 @@
 linu
+calda
+calda
+calda
 linu
-hash
-linu
-linu
+bash
 linu
