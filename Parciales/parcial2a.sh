@@ -10,3 +10,11 @@ if [ ! -f $1 ]; then
 fi
 
 cantLineas=$(cat $1 | wc -l)
+if [ $cantLineas -gt 10 ]; then
+    tar -cf archivo.tar $1
+    gzip archivo.tar
+fi 
+if [ $cantLineas -lt 10 ]; then
+    grep -n 'script' $1 | cut -d ':' -f 1
+    #grep -n 'script' $1 | awk -F ':' '{print $1}'
+fi 
