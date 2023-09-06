@@ -9,7 +9,7 @@ if [ ! -d $1 ]; then
 fi
 
 #sed -i 's/search/replace/' arch
-archivos=$( find $1 -perm 755 | find $1 -name '*.sh')
+archivos=$( find $1 -perm 755 -name '*.sh')
 
 for archivo in $archivos; do
     sed -i 's/bash/sh/' $archivo
